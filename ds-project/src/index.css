@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+a,p,h1{
+    color: white;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.anker{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+a{
+    font-size: 14px;
+}
+
