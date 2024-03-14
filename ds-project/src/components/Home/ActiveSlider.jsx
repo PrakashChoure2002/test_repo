@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
-import { FreeMode, Pagination,Autoplay } from "swiper/modules";
-
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import 'swiper/css/autoplay';
-
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from '.';
-
+import { HiOutlineShoppingCart, HiEye, HiTrash } from 'react-icons/hi';
 
 const ActiveSlider = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
-    <div className='flex items-center justify-center flex-col h-[500px] relative bg-[#FFFFFF]'>
-        <Swiper breakpoints={{
+    <div className='flex  items-center justify-center flex-col h-[500] relative bg-[#FFFFFF]'>
+      <Swiper
+        breakpoints={{
           340: {
             slidesPerView: 2,
             spaceBetween: 15,
@@ -29,16 +29,20 @@ const ActiveSlider = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Pagination,Autoplay]}
+        modules={[FreeMode, Pagination, Autoplay]}
         className="max-w-[90%] lg:max-w-[80%]"
         autoplay={{
-            delay: 3000, 
-            disableOnInteraction: false,
-          }}
-        >
-{ServiceData.map((item)=>(
-    <SwiperSlide key={item.title}>
-        <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+      >
+        {ServiceData.map((item, index) => (
+          <SwiperSlide key={item.title}>
+            <div
+              className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.backgroundImage})` }}
@@ -49,18 +53,26 @@ const ActiveSlider = () => {
                 <h1 className="text-xl lg:text-2xl">{item.title} </h1>
                 <p className="lg:text-[18px]">{item.content} </p>
               </div>
+              {hoveredIndex === index && (
+                <div className=" bg-gray-300 rounded-3xl absolute bottom-0   right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-00 my-10 mx-20 ">
+                  <button className="text-gray-500 hover:text-blue-500 mr-2 ">
+                    <HiOutlineShoppingCart />
+                  </button>
+                  <button className="text-gray-500 hover:text-blue-500 mr-2 text-3xl">
+                    <HiEye />
+                  </button>
+                  <button className="text-gray-500 text-3xl hover:text-red-500">
+                    <HiTrash />
+                  </button>
+                </div>
+              )}
               <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
             </div>
-
-    </SwiperSlide>
-))}
-
-
-        </Swiper>
-      
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default ActiveSlider
-
+export default ActiveSlider;

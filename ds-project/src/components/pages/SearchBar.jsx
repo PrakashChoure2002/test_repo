@@ -14,16 +14,19 @@ const SearchBar = () => {
                     <p className="text-gray-600 mt-2">Price: RS.{item.price}</p>
                 </div>
             </div>
-            <div className=" bg-red-500 rounded-3xl absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-00 my-20 mx-20 ">
+            <div className=" bg-gray-300 rounded-3xl absolute bottom-0   right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-00 my-10 mx-20 ">
                 <button className="text-gray-500 hover:text-blue-500 mr-2 ">
 
-                   <Link to='##' className="text-black"> <HiOutlineShoppingCart /></Link>
+                   <Link to='/product' className="text-black text-3xl  hover:text-blue-500"> <HiOutlineShoppingCart /></Link>
                 </button>
-                <button className="text-gray-500 hover:text-blue-500 mr-2">
-                    <HiEye />
+                <button className="text-gray-500 hover:text-blue-500 mr-2 text-3xl">
+                <Link to='/product' className="text-black text-3xl  hover:text-blue-500">  <HiEye /></Link>
+                   
                 </button>
-                <button className="text-gray-500 hover:text-red-500">
-                    <HiTrash />
+                <button className="text-gray-500 text-3xl hover:text-red-500">
+                <Link to='/product' className="text-black text-3xl  hover:text-red-500">  <HiTrash /></Link>
+                
+                    
                 </button>
             </div>
         </div>

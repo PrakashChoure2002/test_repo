@@ -56,13 +56,13 @@ const Cart = () => {
                     <h3 className='text-lg font-semibold'>{item.title}</h3>
                     <p className='text-gray-700 mt-2'>Price: RS.{item.price}</p>
                     <div className='p-5'>
-                        <p className='text-gray-700 mt-2' >
-                            {expandedIds[item.id] ? item.description  : `${item.description.substring(0, 50)}...`}
+                        <p className='text-gray-700 mt-2  text-left' >
+                            {expandedIds[item.id] ? item.description : `${item.description.substring(0, 50)}...`}
                         </p>
                         <button
-                            className='text-blue-500 hover:text-blue-700'
+                            className='text-blue-500 hover:text-blue-700 '
                             onClick={() => toggleDescription(item.id)}>
-                            {expandedIds[item.id] ? 'Less' : 'More'}
+                            {expandedIds[item.id] ? 'Less' : 'More '}
                         </button>
                     </div>
                 </div>

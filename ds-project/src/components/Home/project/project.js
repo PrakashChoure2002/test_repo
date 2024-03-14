@@ -5,7 +5,7 @@ export const Product=[{
     title:"item 1",
     price:"500",
     image:product1,
-    description:"lorem10",
+    description:"Hlorem10",
     id:"1"
 
 },
