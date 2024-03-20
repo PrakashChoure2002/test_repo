@@ -3,7 +3,10 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../Home/store/cartSlice';
 import { toast, ToastContainer } from 'react-toastify';
+import {Link} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
+
+// const [selectedProduct, setSelectedProduct] = useState(null);
 
 const Product = () => {
     const [data, setData] = useState([]);
@@ -15,6 +18,7 @@ const Product = () => {
     const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
     const dispatch = useDispatch();
+    
 
     const addToCart = (item) => {
         if (isLoggedIn) {
@@ -66,29 +70,52 @@ const Product = () => {
         return categoryMatch && priceMatch && titleMatch;
     });
 
-    const card = filteredData.map((item) => (
+
+    const StarRating = ({ rating }) => {
+        const stars = [];
+        for (let i = 0; i < 5; i++) {
+          if (i < rating) {
+            stars.push(<span key={i} className="text-yellow-400">&#9733;</span>);
+          } else {
+            stars.push(<span key={i} className="text-gray-400">&#9733;</span>);
+          }
+        }
+        return <div className="flex">{stars}</div>;
+      };
+
+    
+    
+
+      const card = filteredData.map((item) => (
         <div key={item.id} className='relative flex flex-col rounded-xl bg-white shadow-lg overflow-hidden mx-10 my-5'>
-            <img src={item.image} alt={item.title} className='w-full h-60 object-cover rounded-t-xl' />
-            <div className='p-4'>
-                <h3 className='text-lg font-semibold text-gray-800'>{item.title}</h3>
-                <p className='text-gray-600 mt-2'>Price: RS.{item.price}</p>
-                <p className='text-gray-700 mt-2'>{truncateDescription(item.description, 100)}</p>
-                <h6 className='text-sm font-semibold text-gray-500 mt-2'>Category: {item.category}</h6>
-                <p className='text-gray-700 mt-2'>
-                    Rating: {item.rating.rate} | In Stock: {item.rating.count}
-                </p>
-                <button
-                    className='bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600'
-                    onClick={() => addToCart(item)}
-                >
-                    ADD TO CART
-                </button>
-            </div>
+            <Link to={`/product/${item.id}`}>
+                <img src={item.image} alt={item.title} className='w-full h-60 object-cover rounded-t-xl' />
+                <div className='p-4'>
+                    <h3 className='text-lg font-semibold text-gray-800'>{item.title}</h3>
+                    <p className='text-black mt-2 font-semibold'>Price: RS.{item.price}</p>
+                    <p className='text-black mt-2 font-normal'>Description:{truncateDescription(item.description, 100)}</p>
+                    <h6 className='text-sm font-semibold text-black mt-2'>Category: {item.category}</h6>
+                    <p className='text-black mt-2 font-medium '>
+                        Rating: <StarRating rating={item.rating.rate} /> | In Stock: {item.rating.count}
+                    </p>
+                </div>
+            </Link>
+            <button
+                className='bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600'
+                onClick={() => addToCart(item)}
+            >
+                ADD TO CART
+            </button>
         </div>
     ));
+    
+    
+
+    
 
     return (
         <div>
+           
             <ToastContainer/>
             <div className="flex space-x-4  p-4 border-slate-950 bg-gray-500">
                 <div className="flex-1">
@@ -132,9 +159,17 @@ const Product = () => {
             ) : loading ? (
                 <div className='text-center text-5xl bg-pink-100'>loading......</div>
             ) : (
-                <div className="grid p-4 grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 bg-pink-100">{card}</div>
+                
+                
+                <div className="grid p-4 grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 bg-pink-100">
+                    
+                    
+                    {card}
+                  
+                   </div>
             )}
         </div>
+        
     );
 }
 

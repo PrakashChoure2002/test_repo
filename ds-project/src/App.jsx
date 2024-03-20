@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState, useEffect } from 'react'
+import axios from 'axios';
 import Footer from './components/Footer'
 import Header from './components/Header'
 // prsh
@@ -21,10 +22,39 @@ import Contact from './components/pages/Contact'
 import Faq from './components/pages/Faq'
 import LookBook from './components/pages/LookBook'
 import SearchBar from './components/pages/SearchBar'
+import Productdetails from './components/product/Productdetails'
+import Skin from './components/features/Skin';
+import Face from './components/features/Face';
+import Fragrance from './components/features/Fragrance';
+import Eye from './components/features/Eye';
+import Lip from './components/features/Lip';
+import EyeDetails from './components/features/EyeDetails';
+import FaceDetails from './components/features/FaceDetails';
+import FragranceDetails from './components/features/FragranceDetails';
+import LipDetails from './components/features/LipDetails';
+import SkinDetails from './components/features/SkinDetails';
+// import EyeProducts from './components/Home/project/Eye';
 
 
 
 const App = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+      async function fetchData() {
+          try {
+              const response = await axios.get('https://fakestoreapi.com/products');
+              setData(response.data);
+              setLoading(false);
+          } catch (error) {
+              console.error('Error fetching data:', error);
+              setLoading(false);
+          }
+      }
+
+      fetchData();
+  }, []);
   return (
     <div className='w-full h-screen'>
        <Provider store={store}> 
@@ -35,8 +65,7 @@ const App = () => {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/shope' element={<Shop/>}/>
-          <Route path='/product' element={<Product/>}/>
-          <Route path='/features' element={<Features/>}/>
+        <Route path='/features' element={<Features/>}/>
           <Route path='/blog' element={<Blog/>}/>
           <Route path='portfolio' element={<Portfolio/>}/>
           <Route path='/all' element={<All/>}/>
@@ -46,6 +75,18 @@ const App = () => {
           <Route path='/faq' element={<Faq/>}/>
           <Route path='/lookbook' element={<LookBook/>}/>
           <Route path='/search' element={<SearchBar/>}/>
+          <Route path='/product' element={<Product data={data} loading={loading} />}/>
+          <Route path='/product/:itemId' element={<Productdetails data={data}/>}/>
+          <Route path='/skin' element={<Skin/>}/>
+          <Route path='/skin/:productId' element={<SkinDetails/>}/>
+          <Route path='/face' element={<Face/>}/>
+          <Route path='/face/:productId' element={<FaceDetails/>}/>
+          <Route path='/fragrance' element={<Fragrance/>}/>
+          <Route path='/fragrance/:productId' element={<FragranceDetails/>}/>
+          <Route path='/eyes' element={<Eye/>}/>
+          <Route path='/eyes/:productId' element={<EyeDetails/>}/>
+          <Route path='/lips' element={<Lip/>}/>
+          <Route path='/lips/:productId' element={<LipDetails/>}/>
         </Routes>
         <Footer/>
       </Router>

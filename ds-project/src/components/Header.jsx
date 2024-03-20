@@ -35,6 +35,16 @@ const Header = () => {
 
   const [isOn, setIsOn] = useState(false);
 
+  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
+
+  const openFeaturesDropdown = () => {
+    setIsFeaturesOpen(true);
+  };
+
+  const closeFeaturesDropdown = () => {
+    setIsFeaturesOpen(false);
+  };
+
   const openDropdown = () => {
     setTimeout(() => {
       setIsOpen(true);
@@ -136,14 +146,70 @@ const Header = () => {
           >
             product
           </NavLink>
+          <div
+          className="relative"
+          onMouseEnter={openFeaturesDropdown}
+          onMouseLeave={closeFeaturesDropdown}
+        >
           <NavLink
             className={(e) =>
               e.isActive ? "text-black font-bold" : "text-black"
             }
             to="/features"
           >
-            features
+            Features
           </NavLink>
+          {isFeaturesOpen && (
+            <div className="absolute z-[10] mt-2 w-32 text-center rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+            onMouseEnter={openDropdown}
+            onMouseLeave={closeDropdown} >
+              <div
+                className="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="options-menu"
+              >
+                <Link
+                  to="/skin"
+                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                >
+                  Skin
+                </Link>
+                <Link
+                  to="/face"
+                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                >
+                  Face
+                </Link>
+                <Link
+                  to="/fragrance"
+                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                >
+                  Fragrance
+                </Link>
+                <Link
+                  to="/eyes"
+                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                >
+                  Eyes
+                </Link>
+                <Link
+                  to="/lips"
+                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  role="menuitem"
+                >
+                  Lips
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+          
+          
           <div
             className="relative"
             onMouseEnter={openDrop}

@@ -4,7 +4,7 @@ export const productproject=[
     {
   Name:"item 2",
     Price:"500",
-    img:product1,
+    imgage:product1,
     des:"lorem10",
     id:"1"
 

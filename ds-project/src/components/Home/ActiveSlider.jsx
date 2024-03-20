@@ -8,6 +8,7 @@ import 'swiper/css/autoplay';
 import { RxArrowTopRight } from "react-icons/rx";
 import { ServiceData } from '.';
 import { HiOutlineShoppingCart, HiEye, HiTrash } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const ActiveSlider = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -54,15 +55,18 @@ const ActiveSlider = () => {
                 <p className="lg:text-[18px]">{item.content} </p>
               </div>
               {hoveredIndex === index && (
-                <div className=" bg-gray-300 rounded-3xl absolute bottom-0   right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-00 my-10 mx-20 ">
-                  <button className="text-gray-500 hover:text-blue-500 mr-2 ">
-                    <HiOutlineShoppingCart />
+                <div className=" bg-pink-100 px-5  rounded-3xl absolute bottom-0   right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-00 my-10 mx-5 ">
+                  <button className="text-gray-300 hover:text-blue-500 mr-2 ">
+                  <Link to='/product' className="text-black text-3xl  hover:text-blue-500"> <HiOutlineShoppingCart /></Link>
+                    
                   </button>
-                  <button className="text-gray-500 hover:text-blue-500 mr-2 text-3xl">
-                    <HiEye />
+                  <button className="text-gray-300 hover:text-blue-500 mr-2 text-3xl">
+                  <Link to='/product' className="text-black text-3xl  hover:text-blue-500">  <HiEye /></Link>
+                    
                   </button>
-                  <button className="text-gray-500 text-3xl hover:text-red-500">
-                    <HiTrash />
+                  <button className="text-gray-300 text-3xl hover:text-red-500">
+                  <Link to='/product' className="text-black text-3xl  hover:text-red-500">  <HiTrash /></Link>
+                    
                   </button>
                 </div>
               )}
