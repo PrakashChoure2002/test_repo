@@ -33,6 +33,7 @@ import FaceDetails from './components/features/FaceDetails';
 import FragranceDetails from './components/features/FragranceDetails';
 import LipDetails from './components/features/LipDetails';
 import SkinDetails from './components/features/SkinDetails';
+import Loading from './components/loading/Loading';
 // import EyeProducts from './components/Home/project/Eye';
 
 
@@ -95,7 +96,13 @@ const App = () => {
       
       
      
-      
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          {/* Your Product component JSX */}
+        </div>
+      )}
      
     </div>
   )
