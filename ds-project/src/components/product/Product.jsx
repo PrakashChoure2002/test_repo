@@ -5,19 +5,21 @@ import { add } from '../Home/store/cartSlice';
 import { toast, ToastContainer } from 'react-toastify';
 import {Link} from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../loading/Loading';
 
 // const [selectedProduct, setSelectedProduct] = useState(null);
 
 const Product = () => {
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true); // State for loading indicator
     const [categoryFilter, setCategoryFilter] = useState('');
     const [priceRangeFilter, setPriceRangeFilter] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
     const [error, setError] = useState('');
     const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
-
     const dispatch = useDispatch();
+
+
     
 
     const addToCart = (item) => {
@@ -157,7 +159,7 @@ const Product = () => {
             {error ? (
                 <div className="text-red-500 text-center">{error}</div>
             ) : loading ? (
-                <div className='text-center text-5xl bg-pink-100'>loading......</div>
+                <div className='text-center text-5xl bg-pink-100'><Loading /></div>
             ) : (
                 
                 
