@@ -19,7 +19,7 @@ const EyeProducts = [
       id: 'Kajal',
       name: 'Blue Kajal',
       price:"250",
-      image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRIJOWmXXdQ-pF3xofr09wKRxjXXKUZHCvRY8C8XYV2S_A7In6OowRzOASl-IB4S-LBS9_pl5vMmok8LRCxiLVYlzKxrlEYMJnuDDZG9oybLPW3X4YA93ToYw&usqp=CAE',
+      image: 'https:/ /encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRIJOWmXXdQ-pF3xofr09wKRxjXXKUZHCvRY8C8XYV2S_A7In6OowRzOASl-IB4S-LBS9_pl5vMmok8LRCxiLVYlzKxrlEYMJnuDDZG9oybLPW3X4YA93ToYw&usqp=CAE',
       category: 'Kajal',
       description:"lorem 10"
     },

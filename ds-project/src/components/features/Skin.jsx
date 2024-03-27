@@ -67,7 +67,7 @@ const Skin = () => {
     <div key={product.id} className="border p-3 mx-10 flex flex-col items-center">
       <Link to={`/skin/${product.id}`}>
       <div className="flex justify-center w-full mb-2">
-        <img src={product.image} alt={product.name} className="max-h-40 w-auto" />
+        <img src={product.image[0].imagemod1} alt={product.name} className="max-h-40 w-auto" />
       </div>
       <div className="text-center">
         <p className="font-bold text-black">Name:{product.name}</p>
