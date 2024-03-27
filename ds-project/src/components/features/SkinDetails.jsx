@@ -93,4 +93,4 @@ const SkinDetails = () => {
     );
 }
 
-export default SkinDetails
+export default SkinDetails;
