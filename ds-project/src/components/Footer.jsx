@@ -23,8 +23,8 @@ const Footer = () => {
       <div className="raper w-full min-h-[98%] bg-[#000000] bg-opacity-90 md:flex gap-20  py-10 px-5 md:px-32 relative">
         <div className="w-[100%] py-6 text-center md:w-[30%] h-[100%] bg-[#000]">
           <img className='ml-[35%] md:ml-10' src={vitotaLogo} alt=""  />
-          <p className='leading-9 mt-6 text-sm text-capitalize flex flex-col text-white '>It is a long established fact that a <br /> reader will be distracted by the <br /> readable content.Lorem Ipsum is <br /> simply dummy text of been the <br /> industry's standard ...</p>
-          <div className="flex justify-center items-center ml-0 md:ml-0 gap-3 md:gap-4 mt-6 ">
+          <p className='leading-9 mt-6 text-sm text-capitalize text-center flex flex-col text-white '>It is a long established fact that a <br /> reader will be distracted by the <br /> readable content.Lorem Ipsum is <br /> simply dummy text of been the <br /> industry's standard ...</p>
+          <div className="flex justify-center items-center md:ml-0 gap-3 md:gap-4 mt-6 ">
             <div className="p-2 bg-white rounded-full"><TiSocialFacebook /></div>
             <div className="p-2 bg-white rounded-full"><FaPinterest /></div>
             <div className="p-2 bg-white rounded-full"><TiSocialTwitter /></div>
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="text-capitalize flex flex-col text-white  text-center py-6  w-[100%] md:w-[15%] h-[100%]">
           <h1>MAIN MENU</h1>
-          <a href="">Home</a>
+          <a href="" className='space-y-2'>Home</a>
           <a href="">Search</a>
           <a href="">Privicy Policy</a>
           <a href="">Shipping Info</a>
