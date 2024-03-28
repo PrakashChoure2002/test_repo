@@ -3,7 +3,18 @@ const lipProducts = [
       id: 'Redlipstick',
       name: 'Redlipstick',
       price:"250",
-      image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ4JkTgY4x3KcU7LtR-Nwq53ENio95Lz6Mev5wSTpRmdbXvmAdrZPj0mkL0frk8DrKPLcUT5rajtK6aopNxvYdtyZxpAkKVuJPI11S16t67hHlCV4DNRbe9GA&usqp=CAE',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'lipstick',
       description:"lorem 10"
     },
@@ -11,7 +22,18 @@ const lipProducts = [
       id: 'lipsScrub',
       name: 'lipsScrub',
       price:"250",
-      image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSKH_6MSU9NIDkYAC5cbqvN50qjnmidOfdFsv91M2e6Wa2nKpGtHWubgsAs0wf2mL7Wison8AkoI-6cnxGenmMOVhL0CM-8GxvrCpTRgdVN5caVOGuq3xiLtw&usqp=CAE',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'scrub',
       description:"lorem 10"
     },
@@ -19,7 +41,18 @@ const lipProducts = [
       id: ' liplinear',
       name: 'Red-liplinear',
       price:"250",
-      image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ_OUhDWrj1h1FC3cawODyHaTMkktBNcCjsBPNyv2ZYF5uQm1huXcSfS6XM-oDhUvW-MRSlm8yiVi8Q6ofIzknnh-qdTNzvlea34w00esRoGXARs_rdqbcd5A&usqp=CAE',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'liplinear',
       description:"lorem 10"
     },
@@ -27,7 +60,18 @@ const lipProducts = [
       id: 'lipBam',
       name: 'RedlipBam',
       price:"250",
-      image: 'https://rivona.in/cdn/shop/files/strawberrybalm-3D.jpg?v=1689072717&width=823',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'lipBam',
       description:"lorem 10"
     },
@@ -35,7 +79,18 @@ const lipProducts = [
       id: 'lipCraycm',
       name: 'blue Craycm',
       price:"250",
-      image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcThrI4mkIc0lZl5G7XIGSoF2HHyTFHvoktkwt2nrAppvyB1Lgs9CPefp1UCR42-DBBeO5V7qYhRXI409ie6fH3yRAytLGBz__1mrK9buITg&usqp=CAE',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'lipCraycm',
       description:"lorem 10"
     },
@@ -43,7 +98,18 @@ const lipProducts = [
       id: 'lip &cheek Tint',
       name: 'lip &cheek Tint',
       price:"250",
-      image: 'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ8UGhfSQZN1xeA7jlm9oIjEOb-DnLTtAFi-4hXzieFxgxXT5y8xlL2CaixktKmJbwXD1bFFmhIhLIRgqDmOi6mlBWM8qr5vO-o-mkNjulaumfjjTwEWIrMfYk&usqp=CAE',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'lip &cheek Tint',
       description:"lorem 10"
     },
@@ -51,7 +117,18 @@ const lipProducts = [
       id: 'Primer',
       name: 'Primer',
       price:"250",
-      image: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTA0YE0iBzDCRahKZX7LCaMjwliVq9mFZJZTA3869apYSRJA5KumFGfQwGr8-E3H0bDdYPdyNXi2er9gCttPOwpsUnhBlWYE4HOTEZxGHjXAPPjYCJswOtYag&usqp=CAE',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'Primer',
       description:"lorem 10"
     },
@@ -59,7 +136,18 @@ const lipProducts = [
       id: 'liquid lipstick',
       name: 'Purple liquid lipstick',
       price:"250",
-      image: 'https://www.milagrobeauty.com/cdn/shop/files/cosmic.jpg?v=1707811926',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'liquid lipstick',
       description:"lorem 10"
     },
@@ -67,7 +155,18 @@ const lipProducts = [
       id: 'liquid lipstick 1',
       name: 'Red liquid lipstick',
       price:"250",
-      image: 'https://www.facescanada.com/cdn/shop/products/LiquidSindoor_PDP_Red_540x.jpg?v=1646749240',
+      image:[
+        {
+          imagemod1:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod2:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod3:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+          imagemod4:"https://media.karousell.com/media/photos/products/2023/9/17/bioderma_sensibio_micellar_wat_1694954320_d8496c37_progressive_thumbnail.jpg",
+          imagemod5:"https://aqualogica.in/cdn/shop/files/1_2e1f8699-985a-4264-9ebe-d63252fcfb91.jpg?v=1702031696&width=1024",
+
+
+        }
+
+      ],
       category: 'liquid lipstick',
       description:"lorem 10"
     },

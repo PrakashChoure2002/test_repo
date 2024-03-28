@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -8,21 +9,40 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   const handleSignIn = async () => {
+    if (!email || !password) {
+      setError('Please enter both email and password.');
+      return;
+    }
+    if(password.length < 8 || password.length > 20) {
+      setError('Password must be between 8 and 20 characters.');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+    
+
+    
+
     try {
       const response = await axios.post('/user/signin', { email, password });
       const userData = response.data; // Assuming the response includes user data
       // Storing user data in local storage
       // localStorage.setItem('userData', JSON.stringify(userData));
       console.log("hogyaa login");
-        navigate('/')
-      } catch (err) {
-        setError(err.response);
-        // navigate("/login")
+      navigate('/');
+    } catch (err) {
+      setError(err.response);
     }
   };
 
-
-
+  const validateEmail = (email) => {
+    // Basic email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-200">

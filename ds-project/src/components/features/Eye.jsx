@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import { NavLink,Link } from 'react-router-dom'
 import EyeProducts from '../Home/project/Eye'
-import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { add } from '../Home/store/cartSlice';
 
@@ -65,7 +65,7 @@ const Eye = () => {
            <Link  to={`/eyes/${product.id}`}>
             <div className="flex justify-center w-full mb-2">
             
-            <img src={product.image} alt={product.name} className="max-h-40 w-auto" />
+            <img src={product.image[0].imagemod1} alt={product.name} className="max-h-40 w-auto" />
             </div>
             <div className="text-center" >
 

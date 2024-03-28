@@ -24,8 +24,7 @@ const SkinDetails = () => {
 
   return product ?(
     <>
-    
-    
+
     <div className='relative flex flex-col rounded-xl bg-white shadow-lg overflow-hidden '>
       
       <div className="rounded-t-xl  rounded-l-xl rounded-r-xl  relative z-1 text-center cursor-pointer">
