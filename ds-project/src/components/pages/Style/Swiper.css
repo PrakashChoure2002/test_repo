@@ -40,3 +40,6 @@
     object-fit: cover;
   }
   
+  .swiper-button-prev, .swiper-button-next {
+    color: #000;
+  }

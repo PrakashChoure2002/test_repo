@@ -19,10 +19,10 @@ const Footer = () => {
     setCurrentYear(year);
   }, []);
   return (
-    <div className='w-full h-screen relative z-10 md:py-20'>
-      <div className="raper w-full min-h-[98%] bg-[#000000] bg-opacity-90 md:flex gap-20  py-10 px-5 md:px-32 relative">
-        <div className="w-[100%] py-6 text-center md:w-[30%] h-[100%] bg-[#000]">
-          <img className='ml-[35%] md:ml-10' src={vitotaLogo} alt=""  />
+    <div className='w-full h-screen relative z-10 bg-white'>
+      <div className="w-full min-h-[98%] bg-[#000000] bg-opacity-90 flex flex-col md:flex-row gap-20 py-10 px-5 relative">
+        <div className="w-full py-6 text-center md:w-[30%] h-[100%]">
+          <img className='ml-[25%] md:ml-12' src={vitotaLogo} alt=""  />
           <p className='leading-9 mt-6 text-sm text-capitalize text-center flex flex-col text-white '>It is a long established fact that a <br /> reader will be distracted by the <br /> readable content.Lorem Ipsum is <br /> simply dummy text of been the <br /> industry's standard ...</p>
           <div className="flex justify-center items-center md:ml-0 gap-3 md:gap-4 mt-6 ">
             <div className="p-2 bg-white rounded-full"><TiSocialFacebook /></div>
@@ -32,40 +32,40 @@ const Footer = () => {
             <div className="p-2 bg-white rounded-full"><FaLinkedinIn /></div>
           </div>
         </div>
-        <div className="text-capitalize flex flex-col text-white  text-center py-6  w-[100%] md:w-[15%] h-[100%]">
-          <h1>MAIN MENU</h1>
-          <a href="" className='space-y-2'>Home</a>
-          <a href="">Search</a>
-          <a href="">Privicy Policy</a>
-          <a href="">Shipping Info</a>
-          <a href="">Latest News</a>
-          <a href="">Catalog</a>
+        <div className="text-capitalize flex flex-col text-white text-center py-6 w-full md:w-[15%] h-[100%]">
+          <h1 class="my-3 block font-bold text-lg">MAIN MENU</h1>
+          <a href="" class="my-3 block">Home</a>
+          <a href="" class="my-3 block">Search</a>
+          <a href="" class="my-3 block">Privicy Policy</a>
+          <a href="" class="my-3 block">Shipping Info</a>
+          <a href="" class="my-3 block">Latest News</a>
+          <a href="" class="my-3 block">Catalog</a>
         </div>
-        <div className="text-capitalize flex flex-col text-white  text-center py-6 w-[100%] md:w-[15%] h-[100%]">
-          <h1>QUICK VIEW</h1>
-          <a href="">Best Product</a>
-          <a href="">Cosmetics</a>
-          <a href="">Beauty World</a>
-          <a href="">Offer Collection</a>
-          <a href="">Mega Collection</a>
-          <a href="">Training Collection</a>
+        <div className="text-capitalize flex flex-col text-white text-center py-6 w-full md:w-[15%] h-[100%]">
+          <h1 class="my-3 block font-bold text-lg">QUICK VIEW</h1>
+          <a href="" class="my-3 block">Best Product</a>
+          <a href="" class="my-3 block">Cosmetics</a>
+          <a href="" class="my-3 block">Beauty World</a>
+          <a href="" class="my-3 block">Offer Collection</a>
+          <a href="" class="my-3 block">Mega Collection</a>
+          <a href="" class="my-3 block">Training Collection</a>
         </div>
-        <div className="text-capitalize flex flex-col text-white  text-center py-6 w-[100%] md:w-[15%] h-[100%]">
-          <h1>LINKS</h1>
-          <a href="">About Us</a>
-          <a href="">Contact Us</a>
-          <a href="">Faq</a>
-          <a href="">Portfolio</a>
-          <a href="">Search</a>
-          <a href="">Wishlist</a>
-          <a href="">Lookbook</a>
+        <div className="text-capitalize flex flex-col text-white text-center py-6 w-full md:w-[15%] h-[100%]">
+          <h1 class="my-3 block font-bold text-lg">LINKS</h1>
+          <a href="" class="my-3 block">About Us</a>
+          <a href="" class="my-3 block">Contact Us</a>
+          <a href="" class="my-3 block">Faq</a>
+          <a href="" class="my-3 block">Portfolio</a>
+          <a href="" class="my-3 block">Search</a>
+          <a href="" class="my-3 block">Wishlist</a>
+          <a href="" class="my-3 block">Lookbook</a>
         </div> 
-        <div className="text-capitalize flex flex-col text-white text-center py-6 w-[100%] md:w-[20%] h-[100%]">
-          <h1>STORE INFO</h1>
-          <a href=""><IoLocationOutline className='inline-block' />   Vitota Beauty Store  <br /> Bhopal India</a>
-          <a href=""><IoCall className='inline-block' /> Call Us: +918319384910</a>
-          <a href=""><MdOutlineEmail className='inline-block' /> Email Us: <br /> support@vitota.in</a>
-          <a href=""><LiaFaxSolid className='inline-block' /> Fax: 7582908615</a>
+        <div className="text-capitalize flex flex-col text-white text-center py-6 w-full md:w-[15%] h-[100%]">
+          <h1 className='font-bold text-lg'>STORE INFO</h1>
+          <a href="" class="my-3 block"><IoLocationOutline className='inline-block' />   Vitota Beauty Store  <br /> Bhopal India</a>
+          <a href="" class="my-3 block"><IoCall className='inline-block' /> Call Us: +918319384910</a>
+          <a href="" class="my-3 block"><MdOutlineEmail className='inline-block' /> Email Us: <br /> support@vitota.in</a>
+          <a href="" class="my-3 block"><LiaFaxSolid className='inline-block' /> Fax: 7582908615</a>
         </div>
         <div className="absolute right-6 bottom-10 p-4 bg-red-400 rounded-full border-4 border-white"><a href=""><MdKeyboardDoubleArrowUp /></a></div>
       </div>
