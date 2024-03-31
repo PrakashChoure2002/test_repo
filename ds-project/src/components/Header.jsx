@@ -63,7 +63,7 @@ const Header = () => {
     setIsOn(false);
   };
   return (
-    <div className="bg-[#FFFFFF] relative z-10">
+    <div className="bg-[#FFFFFF] fixed top-0 w-full  z-30  ">
       <div className="hidden md:flex justify-between px-[100px] py-2 bg-[#F8F8F8]  ">
         <div className="flex gap-6">
           <h5 className="text-sm">Announce something here</h5>
@@ -117,11 +117,11 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-full py-3 flex items-center justify-between px-2  md:px-[100px] ">
+      <div className="max-w-full py-3 flex items-center justify-between px-2  md:px-[100px]  ">
         <div className="logo">
           <img className="w-[100px] md:w-[200px]" src={vitotaLogo} alt="" />
         </div>
-        <div className="links hidden md:flex gap-14 capitalize text-lg text-black ">
+        <div className="links hidden md:flex gap-14 capitalize text-lg text-black  ">
           <NavLink
             className={(e) =>
               e.isActive ? "text-black font-bold " : "text-black "

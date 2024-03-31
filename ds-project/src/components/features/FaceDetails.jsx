@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { add } from '../Home/store/cartSlice';
 import FaceProducts from '../Home/project/face';
 import CustomerReview from '../CustomerReview';
+import FaceCarsoule from './FaceCarsoule';
 
 
 
@@ -68,6 +69,9 @@ const FaceDetails = () => {
         </div>
       </div>
     </div>
+
+    {/* <FaceCarsoule/> */}
+
       
       <CustomerReview/>
     </div>
