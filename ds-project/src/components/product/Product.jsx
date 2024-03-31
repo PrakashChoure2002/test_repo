@@ -89,7 +89,7 @@ const Product = () => {
     
 
       const card = filteredData.map((item) => (
-        <div key={item.id} className='relative flex flex-col rounded-xl bg-white shadow-lg overflow-hidden mx-10 my-5'>
+        <div key={item.id} className='relative flex flex-col rounded-xl  bg-white shadow-lg overflow-hidden mx-10 my-5'>
             <Link to={`/product/${item.id}`}>
                 <img src={item.image} alt={item.title} className='w-full h-60 object-cover rounded-t-xl' />
                 <div className='p-4'>
@@ -119,43 +119,47 @@ const Product = () => {
         <div>
            
             <ToastContainer/>
-            <div className="flex space-x-4  p-4 border-slate-950 bg-gray-500">
-                <div className="flex-1">
-                    <input
-                        type="text"
-                        placeholder="Search by title"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="border rounded px-2 py-1 "
-                    />
-                </div>
-                <div>
-                    <select
-                        value={categoryFilter}
-                        onChange={(e) => setCategoryFilter(e.target.value)}
-                        className="border rounded px-2 py-1"
-                    >
-                        <option value="">All Categories</option>
-                        <option value="men's clothing">Men's Clothing</option>
-                        <option value="women's clothing">Women's Clothing</option>
-                        {/* Add more categories as needed */}
-                    </select>
-                </div>
-                <div>
-                    <select
-                        value={priceRangeFilter}
-                        onChange={(e) => setPriceRangeFilter(e.target.value)}
-                        className="border rounded px-2 py-1"
-                    >
-                        <option value="">All Price Ranges</option>
-                        <option value="0-100">0 - 100</option>
-                        <option value="above 200">Above 200</option>
-                        <option value="above 300">Above 300</option>
-                        <option value="above 500">Above 500</option>
-                        <option value="above 1000">Above 1000</option>
-                    </select>
-                </div>
-            </div>
+
+            <div className="relative ">
+    <div className="flex flex-col p-4 border-slate-950 bg-gray-500 fixed left-0 top-0 bottom-0">
+        <div className="mb-4 my-24 pt-20">
+            <input
+                type="text"
+                placeholder="Search by title"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="border rounded px-2 py-1"
+            />
+        </div>
+        <div className="mb-4">
+            <select
+                value={categoryFilter}
+                onChange={(e) => setCategoryFilter(e.target.value)}
+                className="border rounded px-2 py-1"
+            >
+                <option value="">All Categories</option>
+                <option value="men's clothing">Men's Clothing</option>
+                <option value="women's clothing">Women's Clothing</option>
+                {/* Add more categories as needed */}
+            </select>
+        </div>
+        <div>
+            <select
+                value={priceRangeFilter}
+                onChange={(e) => setPriceRangeFilter(e.target.value)}
+                className="border rounded px-2 py-1"
+            >
+                <option value="">All Price Ranges</option>
+                <option value="0-100">0 - 100</option>
+                <option value="above 200">Above 200</option>
+                <option value="above 300">Above 300</option>
+                <option value="above 500">Above 500</option>
+                <option value="above 1000">Above 1000</option>
+            </select>
+        </div>
+    </div>
+</div>
+
             {error ? (
                 <div className="text-red-500 text-center">{error}</div>
             ) : loading ? (
@@ -163,12 +167,12 @@ const Product = () => {
             ) : (
                 
                 
-                <div className="grid p-4 grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 bg-pink-100">
-                    
-                    
+                <div className="flex justify-end px-4"> 
+                <div className="grid grid-cols-1 pl-60 sm:grid-cols-2 gap-20 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 bg-pink-100">
                     {card}
-                  
-                   </div>
+                </div>
+            </div>
+            
             )}
         </div>
         
