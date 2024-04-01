@@ -116,8 +116,8 @@ const Header = () => {
             signout
           </button>
         </div>
-      </div>
-      <div className="max-w-full py-3 flex items-center justify-between px-2  md:px-[100px]  ">
+      </div>       
+        <div className="max-w-full py-3 flex items-center justify-between px-2  md:px-[100px]  ">
         <div className="logo">
           <img className="w-[100px] md:w-[200px]" src={vitotaLogo} alt="" />
         </div>
@@ -130,14 +130,6 @@ const Header = () => {
           >
             home
           </NavLink>
-          {/* <NavLink
-            className={(e) =>
-              e.isActive ? "text-black font-bold" : "text-black"
-            }
-            to="/shop"
-          >
-            shop
-          </NavLink> */}
           <NavLink
             className={(e) =>
               e.isActive ? "text-black font-bold" : "text-black"
@@ -327,7 +319,7 @@ const Header = () => {
             />
           )}
         </div>
-      </div>
+        </div>
     </div>
   );
 };
