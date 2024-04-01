@@ -63,7 +63,7 @@ const Header = () => {
     setIsOn(false);
   };
   return (
-    <div className="bg-[#FFFFFF] relative z-30  ">
+    <div className="bg-[#FFFFFF]  z-30 fixed top-0 w-full ">
       <div className="hidden md:flex justify-between px-[100px] py-2 bg-[#F8F8F8]  ">
         <div className="flex gap-6">
           <h5 className="text-sm">Announce something here</h5>
