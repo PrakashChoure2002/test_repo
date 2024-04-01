@@ -4,7 +4,7 @@ import LookBookItems from "./LookBookItems";
 
 const LookBook = () => {
   return (
-    <div className="w-full bg-[#FFFFFF]">
+    <div className="w-full bg-[#FFFFFF] my-20 py-20">
       <div className="w-full h-[100px] bg-gray-200 relative px-20 flex items-center justify-between">
         <p className=" text-black font-bold text-lg">Look BOOK</p>
         <div className="text-lg">

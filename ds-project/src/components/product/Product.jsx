@@ -103,11 +103,13 @@ const Product = () => {
                 </div>
             </Link>
             <button
-                className='bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600'
+                className='bg-blue-500 text-white py-2 rounded-lg mt-4 hover:bg-blue-600 ' 
                 onClick={() => addToCart(item)}
             >
                 ADD TO CART
             </button>
+
+            
         </div>
     ));
     
@@ -120,7 +122,7 @@ const Product = () => {
            
             <ToastContainer/>
 
-            <div className="relative ">
+            <div className="relative  my-20 py-1 ">
     <div className="flex flex-col p-4 border-slate-950 bg-gray-500 fixed left-0 top-0 bottom-0">
         <div className="mb-4 my-24 pt-20">
             <input
@@ -165,9 +167,7 @@ const Product = () => {
             ) : loading ? (
                 <div className='text-center text-5xl bg-pink-100'><Loading /></div>
             ) : (
-                
-                
-                <div className="flex justify-end px-4"> 
+                <div className="flex justify-end "> 
                 <div className="grid grid-cols-1 pl-60 sm:grid-cols-2 gap-20 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 bg-pink-100">
                     {card}
                 </div>

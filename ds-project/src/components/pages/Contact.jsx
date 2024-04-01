@@ -5,7 +5,7 @@ import ContactDetails from './ContactDetails'
 
 const Contact = () => {
   return (
-    <div className="max-[1240px] bg-[#FFFFFF]">
+    <div className="max-[1240px] bg-[#FFFFFF]  my-20 py-20">
         <div className='w-full h-[100px] bg-gray-200 relative px-20 flex items-center justify-between'>
                 <p className=' text-black font-bold text-lg'>Contact US</p>
                 <div className="text-lg">

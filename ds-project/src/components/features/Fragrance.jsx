@@ -25,7 +25,7 @@ const Fragrance = () => {
     const categories = [...new Set(fragranceProducts.map(product => product.category))];
   
   return (
-    <div className='max-[1240px] bg-[#FFFFFF]'>
+    <div className='max-[1240px] bg-[#FFFFFF] mt-20 pt-20'>
          <div className='w-full h-[100px] bg-red-200 relative px-20 flex items-center justify-between'>
                 <p className='text-lg'>Feature:fragrance</p>
                 <div className="text-lg">

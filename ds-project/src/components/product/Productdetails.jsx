@@ -26,7 +26,7 @@ const Productdetails = ({data}) => {
 
     
     return item ? (
-      <div className='relative flex flex-col rounded-xl bg-white shadow-lg overflow-hidden '>
+      <div className='relative flex flex-col rounded-xl bg-white shadow-lg overflow-hidden my-20 py-20'>
       <div className="rounded-t-xl rounded-l-xl rounded-r-xl relative z-1 text-center" >
         
         <img src={item.image} alt={item.title} className='w-50 h-80 object-cover rounded-xl inline-block z-12 py-8 px-4' />

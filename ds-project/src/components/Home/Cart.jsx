@@ -51,7 +51,7 @@ const Cart = () => {
     const card = products.map((item) => (
         <div key={item.id} className='flex items-center justify-between p-4 border-b'>
             <div className='flex items-center'>
-                <img src={item.image} alt={item.title} className='w-20 h-20 object-cover rounded-lg mr-4' />
+                <img src={item.image} alt={item.title} className='w-40 h-40  object-cover rounded-lg mr-10' />
                 <div>
                     <h3 className='text-lg font-semibold'>{item.title}</h3>
                     <p className='text-gray-700 mt-2'>Price: RS.{item.price}</p>
@@ -68,7 +68,6 @@ const Cart = () => {
                 </div>
             </div>
             <div className='flex items-center'>
-                <button className='bg-blue-500 text-white px-4 py-2 rounded-lg mr-4 hover:bg-blue-600' onClick={() => removeItem(item.id)}>Remove</button>
                 <div className='flex items-center border border-gray-300 rounded-lg px-2'>
                     <button className='text-gray-500 hover:text-gray-700' onClick={() => updateItemQuantity(item.id, item.quantity - 1)}>-</button>
                     <p className='mx-2 text-black'>{item.quantity}</p>
@@ -76,13 +75,14 @@ const Cart = () => {
                 </div>
             </div>
             <div>
+                <button className='bg-blue-500 text-white px-10 mb-5 py-2 rounded-lg mr-4 hover:bg-blue-600' onClick={() => removeItem(item.id)}>Remove</button>
                 <p className='font-semibold text-black'>Total: RS.{item.quantity * item.price}</p>
             </div>
         </div>
     ));
 
     return (
-        <div>
+        <div className='mt-20 p-20'>
             <ToastContainer />
             {isLoggedIn ? (
                 <button onClick={handleLogout}>Logout</button>
@@ -95,7 +95,7 @@ const Cart = () => {
                     <p className='font-semibold text-2xl text-blue-500'>Overall Total: RS.{total}</p>
                 </div>
                 <div className='flex justify-end p-4'>
-                    <button className='bg-blue-500 text-white px-4 py-2 rounded-lg mr-4 hover:bg-blue-600'>Checkout</button>
+                    <button className='bg-blue-500 text-white px-4 py-2 rounded-lg mr-4 hover:bg-blue-600' >Checkout</button>
                 </div>
             </div>
         </div>

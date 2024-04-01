@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Features = () => {
     return (
-        <div className='max-[1240px] bg-[#FFFFFF]'>
-            {/* <h1 className='font-[pacifico]  md:text-[200px]'>Coming <span className='md:absolute bottom-[16%] right-[10%] '>Soon</span></h1> */}
+        <div className='max-[1240px] bg-[#FFFFFF] my-20 py-20'>
             <div className='w-full h-[100px] bg-red-200 relative px-20 flex items-center justify-between'>
                 <p className='text-lg'>Feature</p>
                 <div className="text-lg">

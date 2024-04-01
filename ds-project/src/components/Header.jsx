@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoClose, IoSettingsOutline } from "react-icons/io5";
-import { CiShoppingBasket } from "react-icons/ci";
 import { IoCall } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { MdAccountCircle } from "react-icons/md";
@@ -9,11 +8,10 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import vitotaLogo from "../assets/image/vitotoa__logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import Loading from "./loading/Loading";
 const Header = () => {
   const navigate = useNavigate();
 
@@ -48,7 +46,7 @@ const Header = () => {
   const openDropdown = () => {
     setTimeout(() => {
       setIsOpen(true);
-    }, 3000); // Adjust the delay time (in milliseconds) as needed
+    }, 1000); // Adjust the delay time (in milliseconds) as needed
   };
 
   const openDrop = () => {
@@ -57,7 +55,7 @@ const Header = () => {
   const closeDropdown = () => {
     setTimeout(() => {
       setIsOpen(false);
-    }, 3000); // Adjust the delay time (in milliseconds) as needed
+    }, 1000); // Adjust the delay time (in milliseconds) as needed
   };
   const closeDrop = () => {
     setIsOn(false);
@@ -127,6 +125,7 @@ const Header = () => {
               e.isActive ? "text-black font-bold " : "text-black "
             }
             to="/"
+            onClick={<Loading/>}
           >
             home
           </NavLink>
@@ -135,6 +134,7 @@ const Header = () => {
               e.isActive ? "text-black font-bold" : "text-black"
             }
             to="/product"
+            onClick={<Loading/>}
           >
             product
           </NavLink>
@@ -148,6 +148,7 @@ const Header = () => {
               e.isActive ? "text-black font-bold" : "text-black"
             }
             to="/features"
+            onClick={<Loading/>}
           >
             Features
           </NavLink>
@@ -165,6 +166,7 @@ const Header = () => {
                   to="/skin"
                   className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
+                  onClick={<Loading/>}
                 >
                   Skin
                 </Link>
@@ -172,6 +174,7 @@ const Header = () => {
                   to="/face"
                   className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
+                  onClick={<Loading/>}
                 >
                   Face
                 </Link>
@@ -179,6 +182,7 @@ const Header = () => {
                   to="/fragrance"
                   className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
+                  onClick={<Loading/>}
                 >
                   Fragrance
                 </Link>
@@ -186,6 +190,7 @@ const Header = () => {
                   to="/eyes"
                   className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
+                  onClick={<Loading/>}
                 >
                   Eyes
                 </Link>
@@ -193,6 +198,7 @@ const Header = () => {
                   to="/lips"
                   className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
+                  onClick={<Loading/>}
                 >
                   Lips
                 </Link>
@@ -212,6 +218,7 @@ const Header = () => {
                 e.isActive ? "text-black font-bold" : "text-black"
               }
               to="/about"
+              onClick={<Loading/>}
             >
               pages
             </NavLink>
@@ -227,6 +234,7 @@ const Header = () => {
                     to="/about"
                     className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     About us
                   </Link>
@@ -234,6 +242,7 @@ const Header = () => {
                     to="/contact"
                     className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     Contact Us
                   </Link>
@@ -241,6 +250,7 @@ const Header = () => {
                     to="/faq"
                     className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     Faq
                   </Link>
@@ -248,6 +258,7 @@ const Header = () => {
                     to="/portfolio"
                     className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     Portfolio
                   </Link>
@@ -255,6 +266,7 @@ const Header = () => {
                     to="/search"
                     className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     Search
                   </Link>
@@ -262,6 +274,7 @@ const Header = () => {
                     to="/wishlist"
                     className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     Wishlist
                   </Link>
@@ -269,6 +282,7 @@ const Header = () => {
                     to="/lookbook"
                     className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                     role="menuitem"
+                    onClick={<Loading/>}
                   >
                     LookBook
                   </Link>
@@ -281,6 +295,7 @@ const Header = () => {
               e.isActive ? "text-black font-bold" : "text-black"
             }
             to="/blog"
+            onClick={<Loading/>}
           >
             blog
           </NavLink>

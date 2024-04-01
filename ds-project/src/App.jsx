@@ -34,6 +34,7 @@ import FragranceDetails from './components/features/FragranceDetails';
 import LipDetails from './components/features/LipDetails';
 import SkinDetails from './components/features/SkinDetails';
 import Loading from './components/loading/Loading';
+import Wishlist from './components/pages/Wishlist';
 // import EyeProducts from './components/Home/project/Eye';
 
 
@@ -66,7 +67,7 @@ const App = () => {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/shope' element={<Shop/>}/>
-        <Route path='/features' element={<Features/>}/>
+          <Route path='/features' element={<Features/>}/>
           <Route path='/blog' element={<Blog/>}/>
           <Route path='portfolio' element={<Portfolio/>}/>
           <Route path='/all' element={<All/>}/>
@@ -88,6 +89,7 @@ const App = () => {
           <Route path='/eyes/:productId' element={<EyeDetails/>}/>
           <Route path='/lips' element={<Lip/>}/>
           <Route path='/lips/:productId' element={<LipDetails/>}/>
+          <Route path='/wishlist' element={<Wishlist/>}/>
         </Routes>
         <Footer/>
       </Router>

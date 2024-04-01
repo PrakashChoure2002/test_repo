@@ -1,4 +1,4 @@
-import React from 'react'
+  import React from 'react'
 import Aboutone from './Aboutone'
 import Abouttwo from './Abouttwo'
 import AboutSwaper from './AboutSwaper'
@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom'
 
 const About = () => {
   return (
-    <div>
+    <div className='my-10 py-24'>
       <div className='w-full h-[100px] bg-red-200 relative px-20 flex items-center justify-between '>
         <p className='text-lg'>About</p>
         <div className="text-lg">
