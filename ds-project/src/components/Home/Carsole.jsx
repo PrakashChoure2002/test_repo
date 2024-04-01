@@ -46,7 +46,7 @@ const Carsole = () => {
     
     
     <SwiperSlide>
-        <div className="relative w-full h-full my-20 py-5 ">
+        <div className="relative w-full h-full mt-20 pt-20">
           <img 
             src="https://ps-beautyshop.myshopify.com/cdn/shop/files/Slider_banner_2_2ce7b884-55c4-4340-86b2-6ee5332c3356.png?v=1613696346"
             alt="slide1"
@@ -54,12 +54,12 @@ const Carsole = () => {
           />
       <div className="absolute  top-0 md:top-20 right-2 py-8 left-33 md:right-20 flex flex-col items-center justify-center p-10 text-center md:text-right">
       <p className="font-italianno font-cursive  text-black text-md md:text-3xl">Free delivery upto Rs.500</p>
-      <h1 className="text-pink-500 font-bold text-2xl md:text-6xl">FASHION 2024</h1>
+      <h1 className="text-blue-400 font-bold text-2xl md:text-6xl">FASHION 2024</h1>
       <h5 className="text-black text-md md:text-3xl "><>-------------------</>SHOP NOW</h5>
     </div>
         </div>
       </SwiperSlide>
-    <SwiperSlide><div className="relative w-full h-full my-20 py-5 ">
+    <SwiperSlide><div className="relative w-full h-full mt-20 pt-20 ">
   <img
     src="https://ps-beautyshop.myshopify.com/cdn/shop/files/Slider_banner_1_2bc6d970-e7ca-43c4-a86b-fc9b25020f62.png?v=1613696346"
     alt="slide1"
@@ -67,13 +67,13 @@ const Carsole = () => {
   />
   <div className="absolute  top-0 md:top-20 left-2 py-8 left-33 md:left-20 flex flex-col items-center justify-center p-10 text-center md:text-right">
       <p className="font-italianno font-cursive text-black text-md md:text-3xl">OFFER AVALIBLE upto Rs.50%</p>
-      <h1 className="text-pink-500 font-bold text-2xl md:text-6xl">FASHION 2024</h1>
+      <h1 className="text-blue-400 font-bold text-2xl md:text-6xl">FASHION 2024</h1>
       <h5 className="text-black text-md md:text-3xl"><>-------------------</>BEAUTY IMAGE</h5>
       
       </div>
       
 </div></SwiperSlide>
-    <SwiperSlide><div className="relative w-full h-full my-20 py-5 ">
+    <SwiperSlide><div className="relative w-full h-full mt-20 pt-20 ">
           <img
             src="https://ps-beautyshop.myshopify.com/cdn/shop/files/Slider_banner_1_2bc6d970-e7ca-43c4-a86b-fc9b25020f62.png?v=1613696346"
             alt="slide1"
@@ -81,7 +81,7 @@ const Carsole = () => {
           />
      <div className="absolute  top-0 md:top-20 left-2 py-8 left-33 md:left-20 flex flex-col items-center justify-center p-10 text-center md:text-right">
       <p className="font-italianno font-cursive text-black text-md md:text-3xl">Free delivery upto Rs.500</p>
-      <h1 className="text-pink-500 font-bold text-2xl md:text-6xl">FASHION 2024</h1>
+      <h1 className="text-blue-400 font-bold text-2xl md:text-6xl">FASHION 2024</h1>
       <h5 className="text-black text-md md:text-3xl"><>-------------------</>SHOP NOW</h5>
     </div>
         </div></SwiperSlide>

@@ -17,8 +17,8 @@ const Header = () => {
 
   const handleSignout = async () => {
     try {
-      await axios.get("/user/signout"); // Assuming your backend has a signout endpoint
-      localStorage.removeItem("userData"); // Remove user data from local storage
+      await axios.get("/user/signout");
+      localStorage.removeItem("userData");
       console.log("User signed out");
       navigate("/login");
     } catch (error) {
@@ -55,13 +55,13 @@ const Header = () => {
   const closeDropdown = () => {
     setTimeout(() => {
       setIsOpen(false);
-    }, 1000); // Adjust the delay time (in milliseconds) as needed
+    }, 1000);
   };
   const closeDrop = () => {
     setIsOn(false);
   };
   return (
-    <div className="bg-[#FFFFFF]  z-30 fixed top-0 w-full ">
+    <div className="bg-[#191818]  z-30 fixed top-0 w-full ">
       <div className="hidden md:flex justify-between px-[100px] py-2 bg-[#F8F8F8]  ">
         <div className="flex gap-6">
           <h5 className="text-sm">Announce something here</h5>
@@ -122,7 +122,7 @@ const Header = () => {
         <div className="links hidden md:flex gap-14 capitalize text-lg text-black  ">
           <NavLink
             className={(e) =>
-              e.isActive ? "text-black font-bold " : "text-black "
+              e.isActive ? "text-white font-bold " : "text-white "
             }
             to="/"
             onClick={<Loading/>}
@@ -131,7 +131,7 @@ const Header = () => {
           </NavLink>
           <NavLink
             className={(e) =>
-              e.isActive ? "text-black font-bold" : "text-black"
+              e.isActive ? "text-white font-bold" : "text-white"
             }
             to="/product"
             onClick={<Loading/>}
@@ -145,7 +145,7 @@ const Header = () => {
         >
           <NavLink
             className={(e) =>
-              e.isActive ? "text-black font-bold" : "text-black"
+              e.isActive ? "text-white font-bold" : "text-white"
             }
             to="/features"
             onClick={<Loading/>}
@@ -215,7 +215,7 @@ const Header = () => {
           >
             <NavLink
               className={(e) =>
-                e.isActive ? "text-black font-bold" : "text-black"
+                e.isActive ? "text-white font-bold" : "text-white"
               }
               to="/about"
               onClick={<Loading/>}
@@ -292,7 +292,7 @@ const Header = () => {
           </div>
           <NavLink
             className={(e) =>
-              e.isActive ? "text-black font-bold" : "text-black"
+              e.isActive ? "text-white font-bold" : "text-white"
             }
             to="/blog"
             onClick={<Loading/>}
@@ -314,11 +314,11 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center justify-center text-2xl gap-3 cursor-pointer">
-          <CiSearch />
-          <IoSettingsOutline />
-          <Link to="/cart" className="flex items-center  gap-1 text-black">
+          <CiSearch className="text-white" />
+          <IoSettingsOutline className="text-white"  />
+          <Link to="/cart" className="flex items-center  gap-1 text-white">
             <FaShoppingCart className="size-6  hover:text-pink-500 " />
-            <span className="text-sm ml text-black   hover:text-pink-500">
+            <span className="text-sm ml text-white   hover:text-pink-500">
               {Selector.length}
             </span>
           </Link>
