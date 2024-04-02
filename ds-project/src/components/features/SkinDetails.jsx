@@ -45,12 +45,12 @@ const SkinDetails = () => {
                 </div>
        
        
-        <button className='bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600' onClick={() => addToCart(product)}>Add To Cart</button>
+        <button className='bg-blue-900 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-500' onClick={() => addToCart(product)}>Add To Cart</button>
           
       </div>
       
       <div className=" flex ">
-      <button className="  text-slate-800 bg-blue-500 flex-none rounded-2xl p-2 text-sm font-extrabold transition-transform transform hover:scale-105" >Combo Product</button>
+      <button className="  text-white bg-blue-900 flex-none rounded-2xl p-2 text-sm font-extrabold transition-transform transform hover:scale-105" >Combo Product</button>
       
       </div>
       {/* video 1 */}

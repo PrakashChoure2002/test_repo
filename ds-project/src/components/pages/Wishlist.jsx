@@ -32,7 +32,7 @@ const Wishlist = () => {
                 <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
                 <p className="text-gray-700">${item.price}</p>
                 <button
-                  className="mt-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none"
+                  className="mt-2 px-4 py-2 bg-blue-900 text-white rounded hover:bg-blue-500 focus:outline-none"
                   onClick={() => removeFromWishlist(item.id)}
                 >
                   Remove

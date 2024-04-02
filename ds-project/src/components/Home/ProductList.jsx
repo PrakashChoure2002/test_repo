@@ -71,7 +71,7 @@ const ProductList = () => {
         <p className='text-gray-700 mt-2'>Price: RS.{item.price}</p>
         <p className='text-gray-700 mt-2'>{item.description}</p>
         
-        <button className='bg-blue-500 text-white px-4 rounded-lg mt-4 hover:bg-blue-600' onClick={() => addToCart(item)}>Add To Cart</button>
+        <button className='bg-blue-900 text-white px-4 rounded-lg mt-4 hover:bg-blue-600' onClick={() => addToCart(item)}>Add To Cart</button>
     </div>
 </div>
 

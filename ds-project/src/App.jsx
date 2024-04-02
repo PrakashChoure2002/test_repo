@@ -35,6 +35,8 @@ import LipDetails from './components/features/LipDetails';
 import SkinDetails from './components/features/SkinDetails';
 import Loading from './components/loading/Loading';
 import Wishlist from './components/pages/Wishlist';
+import PremiumFeatures from './components/Home/PremiunFeatures';
+import PremiumPriceList from './components/Home/PremiumPriceList';
 // import EyeProducts from './components/Home/project/Eye';
 
 
@@ -90,6 +92,8 @@ const App = () => {
           <Route path='/lips' element={<Lip/>}/>
           <Route path='/lips/:productId' element={<LipDetails/>}/>
           <Route path='/wishlist' element={<Wishlist/>}/>
+          <Route path='/Pr' element={<PremiumFeatures/>}/>
+          <Route path='/Premium' element={<PremiumPriceList/>}/>
         </Routes>
         <Footer/>
       </Router>

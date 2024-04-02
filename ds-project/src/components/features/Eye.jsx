@@ -38,7 +38,7 @@ const Eye = () => {
             <div>
       <div className="flex justify-center space-x-4 mb-4">
         <button
-          className={`border px-4 py-2 ${categoryFilter === '' ? 'bg-blue-500 text-white' : 'bg-white text-black'}`}
+          className={`border px-4 py-2 ${categoryFilter === '' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}
           onClick={() => setCategoryFilter('')}
         >
           All
@@ -46,7 +46,7 @@ const Eye = () => {
         {categories.map(category => (
           <button
             key={category}
-            className={`border px-4 py-2 ${categoryFilter === category ? 'bg-blue-500 text-white' : 'bg-white text-black'}`}
+            className={`border px-4 py-2 ${categoryFilter === category ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}
             onClick={() => setCategoryFilter(category)}
           >
             {category}
@@ -82,7 +82,7 @@ const Eye = () => {
             
             
             <button
-                className='bg-blue-500 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-600'
+                className='bg-blue-900 text-white px-4 py-2 rounded-lg mt-4 hover:bg-blue-500'
                 onClick={() => addToCart(product)}
             >
                 ADD TO CART

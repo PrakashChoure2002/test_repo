@@ -4,6 +4,7 @@ import { remove, updateQuantity} from './store/cartSlice';
 import { login, logout} from './store/authSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -82,7 +83,7 @@ const Cart = () => {
     ));
 
     return (
-        <div className='mt-20 p-20'>
+        <div className='mt-20 p-20 '>
             <ToastContainer />
             {isLoggedIn ? (
                 <button onClick={handleLogout}>Logout</button>
@@ -90,6 +91,9 @@ const Cart = () => {
                 <button onClick={handleLogin}>Login</button>
             )}
             {card}
+            <div className='m-10 text-xl '>
+            <span>Switch To </span><Link to='/Premium'> <button className='rounded-xl  bg-red-500 px-4 py-1 hover:bg-blue-600 hover:text-white' >Premiun</button></Link>
+            </div>
             <div className='flex justify-between p-4 '>
                 <div className='p-4'>
                     <p className='font-semibold text-2xl text-blue-500'>Overall Total: RS.{total}</p>

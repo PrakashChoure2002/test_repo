@@ -12,6 +12,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import Loading from "./loading/Loading";
+import Wishlist from "./pages/Wishlist";
 const Header = () => {
   const navigate = useNavigate();
 
@@ -66,26 +67,23 @@ const Header = () => {
         <div className="flex gap-6">
           <h5 className="text-sm">Announce something here</h5>
           <h5 className="text-sm">
-            <IoCall className="inline-block mr-1 text-pink-400" /> CALL US:
+            <IoCall className="inline-block mr-1 text-blue-900" /> CALL US:
             +918319384910
           </h5>
         </div>
         <div className="flex gap-3 text-sm text-[#9e9d9d] cursor-pointer">
-          <h5>
-            {" "}
-            <FaHeart className="inline-block mr-1 text-pink-400" /> Wishlist{" "}
-          </h5>
+          <h5><Link to='/wishlist'><FaHeart className="inline-block mr-1 text-blue-900" /> Wishlist</Link></h5>
           <div
             className="relative"
             onMouseEnter={openDropdown}
             onMouseLeave={closeDropdown}
           >
             <h5>
-              <MdAccountCircle className="inline-block mr-1 text-pink-400" /> My
+              <MdAccountCircle className="inline-block mr-1 text-blue-900" /> My
               Account <IoIosArrowDown className="inline-block" />
             </h5>
             {isOpen && (
-              <div className="absolute z-10 mt-2 w-32 text-center rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div className="absolute z-10 mt-2 w-32 text-center rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5">
                 <div
                   className="py-1"
                   role="menu"
@@ -94,14 +92,14 @@ const Header = () => {
                 >
                   <Link
                     to="/login"
-                    className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block  px-4 py-1 text-sm text-white hover:bg-gray-900"
                     role="menuitem"
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-1 text-sm text-white hover:bg-gray-900"
                     role="menuitem"
                   >
                     Register
@@ -110,9 +108,7 @@ const Header = () => {
               </div>
             )}
           </div>
-          <button onClick={handleSignout} className="text-red-300">
-            signout
-          </button>
+          
         </div>
       </div>       
         <div className="max-w-full py-3 flex items-center justify-between px-2  md:px-[100px]  ">
@@ -153,7 +149,7 @@ const Header = () => {
             Features
           </NavLink>
           {isFeaturesOpen && (
-            <div className="absolute z-[10] mt-2 w-32 text-center rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+            <div className="absolute z-[10] mt-2 w-32 text-center rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5"
             onMouseEnter={openDropdown}
             onMouseLeave={closeDropdown} >
               <div
@@ -164,7 +160,7 @@ const Header = () => {
               >
                 <Link
                   to="/skin"
-                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-1 text-sm text-white hover:bg-gray-900"
                   role="menuitem"
                   onClick={<Loading/>}
                 >
@@ -172,7 +168,7 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/face"
-                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-1 text-sm text-white hover:bg-gray-900"
                   role="menuitem"
                   onClick={<Loading/>}
                 >
@@ -180,7 +176,7 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/fragrance"
-                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-1 text-sm text-white hover:bg-gray-900"
                   role="menuitem"
                   onClick={<Loading/>}
                 >
@@ -188,7 +184,7 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/eyes"
-                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-1 text-sm text-white hover:bg-gray-900"
                   role="menuitem"
                   onClick={<Loading/>}
                 >
@@ -196,7 +192,7 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/lips"
-                  className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                  className="block px-4 py-1 text-sm text-white hover:bg-gray-900"
                   role="menuitem"
                   onClick={<Loading/>}
                 >
@@ -223,7 +219,7 @@ const Header = () => {
               pages
             </NavLink>
             {isOn && (
-              <div className="absolute z-[10] mt-2 w-32 text-center rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+              <div className="absolute z-[10] mt-2 w-32 text-center rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5">
                 <div
                   className="py-1"
                   role="menu"
@@ -232,7 +228,7 @@ const Header = () => {
                 >
                   <Link
                     to="/about"
-                    className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block  px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -240,7 +236,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/contact"
-                    className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -248,7 +244,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/faq"
-                    className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block  px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -256,7 +252,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/portfolio"
-                    className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -264,7 +260,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/search"
-                    className="block  px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block  px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -272,7 +268,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/wishlist"
-                    className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -280,7 +276,7 @@ const Header = () => {
                   </Link>
                   <Link
                     to="/lookbook"
-                    className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
+                    className="block px-4 py-1 text-sm text-white hover:bg-gray-00"
                     role="menuitem"
                     onClick={<Loading/>}
                   >
@@ -325,12 +321,12 @@ const Header = () => {
           {toggle ? (
             <IoClose
               onClick={() => settoggle(!toggle)}
-              className="text-black text-2xl md:hidden block"
+              className="text-white text-2xl md:hidden block"
             />
           ) : (
             <AiOutlineMenu
               onClick={() => settoggle(!toggle)}
-              className="text-black text-2xl md:hidden block"
+              className="text-white text-2xl md:hidden block"
             />
           )}
         </div>

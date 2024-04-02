@@ -103,7 +103,7 @@ const Product = () => {
                 </div>
             </Link>
             <button
-                className='bg-blue-500 text-white py-2 rounded-lg mt-4 hover:bg-blue-600 ' 
+                className='bg-blue-900 text-white py-2 rounded-lg mt-4 hover:bg-blue-500 ' 
                 onClick={() => addToCart(item)}
             >
                 ADD TO CART
