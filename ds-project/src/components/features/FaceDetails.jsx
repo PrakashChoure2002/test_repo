@@ -3,8 +3,8 @@ import {useParams } from "react-router-dom"
 import { useDispatch } from 'react-redux';
 import { add } from '../Home/store/cartSlice';
 import FaceProducts from '../Home/project/face';
-import CustomerReview from '../CustomerReview';
 import { FaHeart ,FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from 'react-icons/fa';
+import CustomerReview from '../CustomerReview';
 
 
 const FaceDetails = () => {
@@ -165,7 +165,7 @@ const FaceDetails = () => {
             {/* Review Section */}
             {activeSection === 'review' && (
                 <div className="border-2 rounded-lg">
-                  <CustomerReview/>
+                    <CustomerReview/>
                 </div>
             )}
         </div>

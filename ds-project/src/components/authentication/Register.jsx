@@ -56,7 +56,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 mt-20 pt-20">
       <div className="max-w-md w-full bg-white p-8 rounded shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         {!isRegistered ? (

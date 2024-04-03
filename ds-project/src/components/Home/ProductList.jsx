@@ -62,7 +62,7 @@ const ProductList = () => {
     >
       {Product.map((item) => (
         <SwiperSlide key={item.id}>
-          <div className='relative p-10 flex flex-col rounded-xl bg-white shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer'>
+  <div className='relative p-10 flex flex-col rounded-xl bg-white shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer'>
     <div className="rounded-t-xl rounded-l-xl rounded-r-xl relative z-1" onClick={() => handleProductClick(item.id)}>
         <img src={item.image} alt={item.title} className='w-[70%] h-40 object-cover rounded-xl inline-block z-12 py-8 px-4' />
     </div>
@@ -73,7 +73,7 @@ const ProductList = () => {
         
         <button className='bg-blue-900 text-white px-4 rounded-lg mt-4 hover:bg-blue-600' onClick={() => addToCart(item)}>Add To Cart</button>
     </div>
-</div>
+  </div>
 
         </SwiperSlide>
       ))}

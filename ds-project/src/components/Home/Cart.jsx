@@ -50,9 +50,9 @@ const Cart = () => {
     }
 
     const card = products.map((item) => (
-        <div key={item.id} className='flex items-center justify-between p-4 border-b'>
+        <div key={item.id} className='flex items-center border-4 border-gray-300 justify-between p-5 m-5 '>
             <div className='flex items-center'>
-                <img src={item.image} alt={item.title} className='w-40 h-40  object-cover rounded-lg mr-10' />
+                <img src={item.image} alt={item.title} className='w-40 h-40 shadow-lg object-cover rounded-lg mr-10' />
                 <div>
                     <h3 className='text-lg font-semibold'>{item.title}</h3>
                     <p className='text-gray-700 mt-2'>Price: RS.{item.price}</p>
@@ -77,7 +77,7 @@ const Cart = () => {
             </div>
             <div>
                 <button className='bg-blue-500 text-white px-10 mb-5 py-2 rounded-lg mr-4 hover:bg-blue-600' onClick={() => removeItem(item.id)}>Remove</button>
-                <p className='font-semibold text-black'>Total: RS.{item.quantity * item.price}</p>
+                <p className='font-semibold text-center text-black'>RS.{item.quantity * item.price}</p>
             </div>
         </div>
     ));
@@ -91,16 +91,33 @@ const Cart = () => {
                 <button onClick={handleLogin}>Login</button>
             )}
             {card}
-            <div className='m-10 text-xl '>
-            <span>Switch To </span><Link to='/Premium'> <button className='rounded-xl  bg-red-500 px-4 py-1 hover:bg-blue-600 hover:text-white' >Premiun</button></Link>
-            </div>
-            <div className='flex justify-between p-4 '>
+            
+            <div className='flex pt-15 justify-between p-4 '>
                 <div className='p-4'>
                     <p className='font-semibold text-2xl text-blue-500'>Overall Total: RS.{total}</p>
                 </div>
                 <div className='flex justify-end p-4'>
                     <button className='bg-blue-500 text-white px-4 py-2 rounded-lg mr-4 hover:bg-blue-600' >Checkout</button>
                 </div>
+            </div>
+            <div className='m-10 text-xl '>
+            <div className="grid grid-cols-1 mb-10 md:grid-cols-3 gap-6">
+                    {/* Premium feature cards */}
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-2">Free Shipping</h3>
+                        <p className="text-gray-600">Get free shipping on all orders with premium membership.</p>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-2">Exclusive Deals</h3>
+                        <p className="text-gray-600">Access exclusive deals and discounts available only to premium members.</p>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-2">Priority Support</h3>
+                        <p className="text-gray-600">Receive priority customer support for all your queries.</p>
+                    </div>
+                </div>
+
+            <span>Switch To </span><Link to='/Premium'> <button className='rounded-xl  bg-red-500 px-4 py-1 hover:bg-blue-600 hover:text-white' >Premiun</button></Link>
             </div>
         </div>
     );
