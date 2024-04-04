@@ -37,7 +37,7 @@ import Loading from './components/loading/Loading';
 import Wishlist from './components/pages/Wishlist';
 import PremiumFeatures from './components/Home/PremiunFeatures';
 import PremiumPriceList from './components/Home/PremiumPriceList';
-// import EyeProducts from './components/Home/project/Eye';
+import Profile from './components/authentication/Profile';
 
 
 
@@ -94,6 +94,7 @@ const App = () => {
           <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/Pr' element={<PremiumFeatures/>}/>
           <Route path='/Premium' element={<PremiumPriceList/>}/>
+          <Route path='/Profile' element={<Profile/>}/>
         </Routes>
         <Footer/>
       </Router>
