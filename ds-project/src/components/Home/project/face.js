@@ -15,7 +15,8 @@ const faceProducts = [
         }
 
       ],      category: 'storbeCream',
-      description:"lorem 10"
+      description:"lorem 10",
+      // rating:'3.4'
     },
     {
       id: 'foundation',
